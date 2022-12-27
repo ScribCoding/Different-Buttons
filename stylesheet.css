@@ -2,23 +2,10 @@
 @media (max-width: 720px) {
 }
 
-@keyframes gradient{
-
-0%{
-    background-color: white;
-    translate: 0px 0px;
-}
-
-100%{
-    background-color:lightblue;
-    translate: 0px 10px;
-}
-    
-}
-
 
 body{
-    margin: 0;
+    margin: 0px;
+    background-color: rgb(20,20,20);
 }
 
 #buttons_display{
@@ -38,30 +25,79 @@ button{
     align-self: center;
     justify-self: center;
     border-radius: 2em;
+    position: relative;
+}
+
+.lightcoral{
+    background-color: lightcoral;
 }
 
 #two{
-    left:50%;
+    transition-property: translate, background-color;
     background-color: white;
-    animation-fill-mode: both;
+    translate: 0px 0px;
 }
 
 #two:hover{
-    animation-name: gradient;
-    animation-duration: 0.5s;
+    transition-property: translate, background-color;
+    transition-duration: 0.5s;
+    translate: 0px 10px;
+    background-color:lightblue;
 }
 
 #three{
     box-shadow: 5px 5px black;
     background-color: white;
+    transition-property: transform, box-shadow;
+    transition-duration: 0.5s;
 }
 
 #three:active{
     box-shadow: 0px 0px black;
     transform: translate(5px, 5px);
+    transition-property: transform, box-shadow;
+    transition-duration: 0.5s;
     background-color: lightgreen;
 }
 
 #three:hover{
     background-color: lightgreen;
+}
+
+#four:active{
+background-color: lightseagreen;
+}
+
+.pop{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: lightseagreen;
+    left: 50%;
+    bottom: 50%;
+    border-radius: 50%;
+}
+
+#five{
+    overflow: hidden;
+}
+
+.load{
+    width: 0px;
+    height: 300px;
+    background-color: lightgreen;
+    position: absolute;
+    top: -20px;
+    left: 0%;
+    border-radius: 2em;
+    overflow: hidden;
+    
+}
+
+.progress{
+    position: absolute;
+    top: 23px;
+    right: 85px;
+    justify-self: center;
+    
 }
