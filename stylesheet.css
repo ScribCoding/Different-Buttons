@@ -1,21 +1,40 @@
-
-@media (max-width: 720px) {
+*{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
+
+#title p{
+ font-size: 50px;
+ font-weight: 1000;
+ margin-bottom: 0;
+}
+
 body{
+    display: flex;
+    flex-direction: column;
     margin: 0px;
     margin-top: 50px;
-    background-color: rgb(20,20,20);
+    background-color: rgb(204, 204, 204);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #buttons_display{
-    background-color: lightblue;
-    min-width: 100%;
+    overflow: hidden;
+    margin: 100px;
+    width: 50%;
+    height: fit-content;
+    background-color: whitesmoke;
     display: grid;
     justify-self: center;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    grid-template-rows: repeat(7,100px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fit,100px);
+    gap: 4em;
+    padding: 50px;
+    border-radius: 5em;
+    box-shadow: 10px 10px;
    
 
 }
@@ -30,7 +49,7 @@ button{
 }
 
 .lightcoral{
-    background-color: lightcoral;
+    background-color: rgb(240, 128, 128);
 }
 
 #two{
@@ -86,7 +105,7 @@ background-color: lightseagreen;
 .load{
     width: 0px;
     height: 300px;
-    background-color: lightgreen;
+    background-color: lightpink;
     position: absolute;
     top: -20px;
     left: 0%;
@@ -162,6 +181,7 @@ background-color: lightseagreen;
     background-color: white;
     position: absolute;
     z-index: 1;
+    box-shadow: 2px 2px;
 }
 
 #seven:hover{
@@ -170,9 +190,30 @@ background-color: lightseagreen;
     background-color: lightcoral;
 }
 
-ul, li{
-    background-color: lightcoral;
+ul{
+    display: flex;
+    flex-direction: column;
     list-style: none;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1px;
+    background-color: lightcoral;
+    padding: 0;
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 2px 2px;
+
+}
+
+li{
+    background-color: lightcoral;
+    padding-left: 6px;
+    width: 100%;
+}
+
+li:hover{
+    background-color: rgb(233, 171, 171);
+
 }
 
 .drop_down_menu{
@@ -192,7 +233,77 @@ ul, li{
     transition-duration: 0.2s;
     position: absolute;
     overflow: hidden;
-    min-height: 75px;
-    translate: 0px 60px;
+    min-height: 84px;
+    translate: 0px 66px;
 }
 
+#eight_overlay{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.eight{
+    max-width: 80px;
+    min-height: 80px;
+    border-radius: 0.5em;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+#bonbon{
+    position: relative;
+    max-height: 100px;
+    left: -1px;
+
+}
+
+#nine_overlay{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+
+}
+
+#nine{
+    position: absolute;
+    border-radius: 50%;
+    max-width: 50px;
+    max-height: 50px;
+    z-index: 1;
+}
+
+#pulse_container{
+    position: absolute;
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 50%;
+    z-index: 0;
+    background-color: lightseagreen;
+}
+
+#nine:hover{
+    background-color: lightseagreen;
+    transition-duration: 0.3s;
+}
+
+#ten{
+transition-property: max-width;
+transition-duration: 0.5s;
+ max-width: 50px;
+ max-height: 40px;
+ background-color: white;
+}
+
+#ten:active{
+transition-property: max-width;
+transition-duration: 2s;
+max-width: 200px;
+max-height: 40px;
+background-color: lightsalmon;
+}
