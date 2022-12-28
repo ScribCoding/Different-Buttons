@@ -71,3 +71,38 @@ let loadAnimation = anime({
 
   buttons[4].onmousedown = loadAnimation.play;
   buttons[4].onmouseup = loadAnimation.pause;
+
+  //SHAPE BUTTON---------------------------------------------
+  shape = document.getElementById("overflow_wrapper");
+  const button6 = () =>{
+    shape.classList.add("overflow_wrapper_active");
+    shape.classList.remove("overflow_wrapper");
+  }
+
+
+  //DROP DOWN ------------------------------------------------
+  let dropdownAnimation = anime({
+    targets: '.drop_down_menu',
+    overflow: 'visible',
+    autoplay: false,
+    height: 100,
+    translateY: 80,
+    easing: 'easeInOutElastic(1, 2)'
+  });
+
+const button7_hover = () => {
+    document.getElementById("drop_down_menu").classList.add("drop_down_menu_show");
+    document.getElementById("drop_down_menu").classList.remove("drop_down_menu");
+}
+
+const button7_unhover = () => {
+    document.getElementById("drop_down_menu").classList.remove("drop_down_menu_show");
+    document.getElementById("drop_down_menu").classList.add("drop_down_menu");
+}
+
+    document.getElementById("drop_down_menu").onmouseenter = button7_hover;
+    document.getElementById("drop_down_menu").onmouseleave = button7_unhover;
+    buttons[6].click = button7_hover;
+    buttons[6].onmouseenter = button7_hover;
+    buttons[6].onmouseleave = button7_unhover;
+ //buttons[6].onmouseenter = dropdownAnimation.play;
